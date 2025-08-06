@@ -1,16 +1,11 @@
 function getElementWidth(content, padding, border) {
-  // '50px' -> 50
+
   const contentValue = parseFloat(content);
   const paddingValue = parseFloat(padding);
   const borderValue = parseFloat(border);
 
-  // Box-sizing: border-box olduğunda toplam genişlik:
-  // totalWidth = content + 2*padding + 2*border
-  // Çünkü padding ve border her iki tarafta da var.
-
   const totalWidth = contentValue + 2 * paddingValue + 2 * borderValue;
 
-  // İstersen tam sayı olarak dönebilirsin, decimal olabilir.
   return totalWidth;
 }
 
